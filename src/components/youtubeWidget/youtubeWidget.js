@@ -1,9 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-// const API_KEY="AIzaSyDyCPXWIvyXEDMVv8nWmAuyg8NUKInrYv4";
-// const API_KEY="AIzaSyC7FrhYaNnhkGpv9yL0Aeo96lKjn4G-dHg";
-// const API_KEY="AIzaSyAXrqlZtTyurZFaUZI_lpVcoDbwdZ30fLI";
-const API_KEY="AIzaSyDz9rcOeUXPEdy9DyCpC5hrBNGQOugC3oQ";
+const API_KEY = process.env.API_KEY;
 
 class YoutubeWidget  extends Component{
 
@@ -14,25 +11,25 @@ class YoutubeWidget  extends Component{
         statistics:[]
     }
     componentDidMount(){
-        axios.get(`https://www.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&forUsername=${this.props.channelName}&key=${API_KEY}`)
-        .then(res=>{
-            this.setState({
-                item:res.data.items[0]
-            });
-            axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.state.item.id}&maxResults=50&key=${API_KEY}`)
-            .then(response=>{
+            axios.get(`https://www.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&forUsername=${this.props.channelName}&key=${API_KEY}`)
+            .then(res=>{
                 this.setState({
-                    videos:response.data.items
+                    item:res.data.items[0]
                 });
-                this.getStats();
+                axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.state.item.id}&maxResults=50&key=${API_KEY}`)
+                .then(response=>{
+                    this.setState({
+                        videos:response.data.items
+                    });
+                    this.getStats();
+                })
+                .catch(err=>{
+                    console.log(err);
+                })
             })
             .catch(err=>{
                 console.log(err);
             })
-        })
-        .catch(err=>{
-            console.log(err);
-        })
     }
 
     getStats=()=>{
