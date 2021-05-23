@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Youtube_Spotify_Widget/static/css/main.836eb79a.chunk.css",
+    "main.js": "/Youtube_Spotify_Widget/static/js/main.8827cc19.chunk.js",
+    "main.js.map": "/Youtube_Spotify_Widget/static/js/main.8827cc19.chunk.js.map",
+    "runtime-main.js": "/Youtube_Spotify_Widget/static/js/runtime-main.4cbe99e2.js",
+    "runtime-main.js.map": "/Youtube_Spotify_Widget/static/js/runtime-main.4cbe99e2.js.map",
+    "static/js/2.ac6d6df5.chunk.js": "/Youtube_Spotify_Widget/static/js/2.ac6d6df5.chunk.js",
+    "static/js/2.ac6d6df5.chunk.js.map": "/Youtube_Spotify_Widget/static/js/2.ac6d6df5.chunk.js.map",
+    "index.html": "/Youtube_Spotify_Widget/index.html",
+    "precache-manifest.03d645c429f74fa74c44ae99f8457147.js": "/Youtube_Spotify_Widget/precache-manifest.03d645c429f74fa74c44ae99f8457147.js",
+    "service-worker.js": "/Youtube_Spotify_Widget/service-worker.js",
+    "static/css/main.836eb79a.chunk.css.map": "/Youtube_Spotify_Widget/static/css/main.836eb79a.chunk.css.map",
+    "static/js/2.ac6d6df5.chunk.js.LICENSE.txt": "/Youtube_Spotify_Widget/static/js/2.ac6d6df5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4cbe99e2.js",
+    "static/js/2.ac6d6df5.chunk.js",
+    "static/css/main.836eb79a.chunk.css",
+    "static/js/main.8827cc19.chunk.js"
+  ]
+}
