@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import {Route,Switch} from 'react-router-dom';
+// import InstagramWidget from './components/instagramWidget/instaWidget';
+import SpotifyWidget from './components/spotifyWidget/spotifyWidget';
+import YoutubeWidget from './components/youtubeWidget/youtubeWidget';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {	
+	
+	render(){
+		return (
+
+			<div className="app">
+				<YoutubeWidget channelName="tseries"/>
+				<SpotifyWidget/>
+				<footer style={{width:"20%",margin:"auto"}}>
+					<h3 style={{fontSize:"18px"}}>Created by <a rel="noopener noreferrer" style={{textDecoration:"none",color:"#4f4f4f"}} target="_blank" href="https://github.com/swift1719" >Ayush Pawar</a></h3>
+				</footer>
+			</div>
+			// <Switch>
+				// {/* <Route 
+				// 	exact path="/" 
+				// 	component={()=><InstagramWidget 
+				// 	username="leomessi" />}
+				// />
+				//  */}
+				
+			// {/* </Switch>						 */}
+		);
+  	}
 }
-
 export default App;
